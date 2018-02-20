@@ -13,6 +13,36 @@
 </head>
 
 <body>
+  <script>
+    window.addEventListener('keypress', function(e) {
+      var key = e.keyCode;
+      if (key == 65 || key == 97) { //A, or middle C note
+        document.getElementById('noteC').play();
+      }
+      if (key == 83 || key == 115) { //S, or D note
+        document.getElementById('noteD').play();
+      }
+      if (key == 68 || key == 100) { //D, or E note
+        document.getElementById('noteE').play();
+      }
+      if (key == 70 || key == 102) { //F, or F note
+        document.getElementById('noteF').play();
+      }
+      if (key == 74 || key == 106) { //J, or G note
+        document.getElementById('noteG').play();
+      }
+      if (key == 75 || key == 107) { //K, or A note
+        document.getElementById('noteA').play();
+      }
+      if (key == 76 || key == 108) { //L, or B note
+        document.getElementById('noteB').play();
+      }
+      if (key == 58 || key == 59) { //:, or high C note
+        document.getElementById('noteHighC').play();
+      }
+    });
+  </script>
+
   <div class="login" align="right">
       <button type="button">Login/Signup</button>
   </div>
@@ -24,18 +54,50 @@
   <div class="nav" align="center">
     <a href="index.html">Home</a> |
     <a href="songs.html">Songs to Play</a> |
-    <a href="recordings.html">Recorded Music</a> |
+    <a href="recordings.html">Recorded Music</a>
+  </div>
+
+  <div id="howto" align="center">
+    <p>How to play: use the keys on your keyboard (ASDFJKL:) to play the keys on the piano!
+      (or just click on the keys, but that's less fun)</p>
   </div>
 
   <div id="piano" align="center">
-    <button type="button" class="key" onclick="highlight(this)">C</button>
-    <button type="button" class="key">D</button>
-    <button type="button" class="key">E</button>
-    <button type="button" class="key">F</button>
-    <button type="button" class="key">G</button>
-    <button type="button" class="key">A</button>
-    <button type="button" class="key">B</button>
-    <button type="button" class="key">C</button>
+    <button type="button" class="pianokey" id="buttonC" onclick="play('a')">C</button>
+    <!--div class="blackkey"></div-->
+    <button type="button" class="pianokey" id="buttonD" onclick="play('s')">D</button>
+    <button type="button" class="pianokey" id="buttonE" onclick="play('d')">E</button>
+    <button type="button" class="pianokey" id="buttonF" onclick="play('f')">F</button>
+    <button type="button" class="pianokey" id="buttonG" onclick="play('j')">G</button>
+    <button type="button" class="pianokey" id="buttonA" onclick="play('k')">A</button>
+    <button type="button" class="pianokey" id="buttonB" onclick="play('l')">B</button>
+    <button type="button" class="pianokey" id="buttonHighC" onclick="play(';')">C</button>
+  </div>
+
+  <div id="keyboard" align="center">
+    <button type="button" class="keymap" id="Akey">A</button>
+    <button type="button" class="keymap" id="Skey">S</button>
+    <button type="button" class="keymap" id="Dkey">D</button>
+    <button type="button" class="keymap" id="Fkey">F</button>
+    <button type="button" class="keymap" id="Jkey">J</button>
+    <button type="button" class="keymap" id="Kkey">K</button>
+    <button type="button" class="keymap" id="Lkey">L</button>
+    <button type="button" class="keymap" id="colonkey">:</button>
+  </div>
+
+  <div id="notes" style="display:none">
+    <audio id="noteC"><source src="notes/noteC.mp3" type="audio/mpeg">middle C</audio>
+    <audio id="noteD"><source src="notes/noteD.mp3" type="audio/mpeg">D</audio>
+    <audio id="noteE"><source src="notes/noteE.mp3" type="audio/mpeg">E</audio>
+    <audio id="noteF"><source src="notes/noteF.mp3" type="audio/mpeg">F</audio>
+    <audio id="noteG"><source src="notes/noteG.mp3" type="audio/mpeg">G</audio>
+    <audio id="noteA"><source src="notes/noteA.mp3" type="audio/mpeg">A</audio>
+    <audio id="noteB"><source src="notes/noteB.mp3" type="audio/mpeg">B</audio>
+    <audio id="noteHighC"><source src="notes/noteHighC.mp3" type="audio/mpeg">high C</audio>
+  </div>
+
+  <div id="credits" align="center">
+    <p><sub>♡ made by: Grace H. & Jenny W. ♡</sub></p>
   </div>
 
 </body>
