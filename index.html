@@ -7,7 +7,7 @@
   <meta name="keywords" content="virtual, piano, keyboard, music">
 
   <link rel="stylesheet" type="text/css" href="index_style.css">
-  <script src="piano.js"></script>
+  <script src="index_piano.js"></script>
 
   <title>Virtual Piano</title>
 </head>
@@ -48,27 +48,30 @@
         document.getElementById('noteHighC').play();
         document.getElementById('colon').focus();
       }
+      if (key == 32) { //spacebar
+        document.getElementById('space').focus();
+        recStopRec();
+      }
     });
   </script>
-
-  <div class="login" align="right">
-      <button type="button" onclick="">Login/Signup</button>
-  </div>
-
-  <div class="header" align="center">
-    <h1>Welcome to the Virtual Piano!</h1>
-  </div>
+  <br/>
+  <div align="right"><a href="login.html" class="login">Login/Signup</a></div>
+  <div class="header" align="center"><h1>Welcome to the Virtual Piano!</h1></div>
 
   <div class="nav" align="center">
-    <button type="button" class="link" onclick="">Home</button>
-    <button type="button" class="link" onclick="">Songs To Play</button>
-    <button type="button" class="link" onclick="">Recorded Music</button>
+    <a href="index.html" class="link">Home</a>
+    <a href="songs.html" class="link">Songs To Play</a>
+    <a href="records.html" class="link">Recorded Music</a>
   </div>
 
-  <div id="howto" align="center">
-    <h2>HOW TO PLAY</h2>
-    <p>Use the keys on your keyboard (ASDFJKL:) to play the keys on the piano!
-      (or just click on the keys, but that's less fun)</p>
+  <div id="howto" align="left">
+    <h2 align="center">HOW IT WORKS</h2>
+    <ul>
+      <li>To play the piano, use the keys on your keyboard "ASDFJKL:" or click on the keys below!</li>
+      <li>You can record what you play by clicking the "Start Recording" button, or pressing "Spacebar".</li>
+      <li>Check out the "Songs To Play" tab for some play-along songs!</li>
+      <li>All recorded music will be in the "Recorded Music" tab.</li>
+    </ul>
   </div>
 
   <div id="main" align="center">
@@ -83,7 +86,6 @@
       <button type="button" class="pianokey" id="Bkey" onclick="play('l')">B</button>
       <button type="button" class="pianokey" id="HighCkey" onclick="play(';')">C</button>
     </div>
-
     <div id="keyboard" align="center">
       <button type="button" class="keymap" id="A" onclick="play('a')">A</button>
       <button type="button" class="keymap" id="S" onclick="play('s')">S</button>
@@ -94,7 +96,6 @@
       <button type="button" class="keymap" id="L" onclick="play('l')">L</button>
       <button type="button" class="keymap" id="colon" onclick="play(';')">:</button>
     </div>
-
     <div id="notes" style="display:none">
       <audio id="noteC"><source src="notes/noteC.mp3" type="audio/mpeg">middle C</audio>
       <audio id="noteD"><source src="notes/noteD.mp3" type="audio/mpeg">D</audio>
@@ -105,10 +106,14 @@
       <audio id="noteB"><source src="notes/noteB.mp3" type="audio/mpeg">B</audio>
       <audio id="noteHighC"><source src="notes/noteHighC.mp3" type="audio/mpeg">high C</audio>
     </div>
+    <br/>
+    <div><button type="button" id="rec" onclick="record()">Start Recording</button></div>
+    <div><button type="button" id="stoprec" onclick="stoprecord()" style="display:none">Stop Recording</button></div>
+    <div><button type="button" id="space" onclick="recStopRec()">Spacebar</button></div>
   </div>
 
   <div id="credits" align="center">
-    <p><sub>♡ made by: Grace H. & Jenny W. ♡</sub></p>
+    <p>♡ made by: Grace H. & Jenny W. ♡</p>
   </div>
 
 </body>

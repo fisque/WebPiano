@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jenny, Grace">
+  <meta name="description" content="login">
+  <meta name="keywords" content="virtual, piano, keyboard, music, login">
+
+  <link rel="stylesheet" type="text/css" href="login_style.css">
+  <script src="login.js"></script>
+
+  <title>Virtual Piano: Login</title>
+</head>
+
+<body>
+  <div class="main" align="center">
+    <h2>Login</h2>
+    <form id="login" align="left">
+      <label>Username: </label>
+      <br/>
+      <input type="text" id="username" autofocus required />
+      <br/><br/>
+      <label>Password: </label>
+      <br/>
+      <input type="password" id="pswrd" required />
+      <div id="pwd-msg"></div>
+      <br/>
+      <div id="user-msg">New? Click <a href="signup.html">here</a> to create an account!</div>
+      <br/>
+      <input type="submit" id="submitbutton" value="Sign in"/>
+      <input type="submit" id="cancelbutton" value="Cancel"  onclick="window.location='index.html'"/>
+    </form>
+  </div>
+
+</body>
+</html>
