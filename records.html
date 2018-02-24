@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jenny, Grace">
+  <meta name="description" content="home">
+  <meta name="keywords" content="virtual, piano, keyboard, music">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!--<script src="piano.js"></script>-->
+  <title>Virtual Piano</title>
+</head>
+
+<body>
+  <div class="login" align="right">
+      <button type="button">Login/Signup</button>
+  </div>
+
+  <div class="header" align="center">
+    <h2>Recorded Music</h2>
+  </div>
+
+  <div class="nav" align="center">
+    <a href="index.html">Home</a> |
+    <a href="songs.html">Songs to Play</a> |
+    <a href="recordings.html">Recorded Music</a> |
+  </div>
+
+  <div class="box" align="center">
+    <p>Songs You've Recorded</p>
+  </div>
+  <div id="container">
+    <table id="songTable" class="table">
+    <div class="smallbox">
+      Song 1
+      <button onclick="remove()" style="float: right;" >Delete</button>
+      <button style="float: right; margin-right: 1%;" onclick="play()">Play</button>
+    </div>
+  </table>
+  </div>
+
+  <script>
+    function remove(){
+      if(window.confirm("Are you sure you want to delete?")){
+        console.log("Wow");
+      }
+    }
+  </script>
+
+</body>
+</html>
+
