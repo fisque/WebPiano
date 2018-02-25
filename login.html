@@ -5,6 +5,7 @@
   <meta name="author" content="Jenny, Grace">
   <meta name="description" content="login">
   <meta name="keywords" content="virtual, piano, keyboard, music, login">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="login_style.css">
   <script src="login.js"></script>
@@ -15,7 +16,7 @@
 <body>
   <div class="main" align="center">
     <h2>Login</h2>
-    <form id="login" align="left">
+    <form action="login.html" id="login" onsubmit="return(validate())" align="left">
       <label>Username: </label>
       <br/>
       <input type="text" id="username" autofocus required />
@@ -29,6 +30,8 @@
       <br/>
       <input type="submit" id="submitbutton" value="Sign in"/>
       <input type="submit" id="cancelbutton" value="Cancel"  onclick="window.location='index.html'"/>
+      </br>
+      <input type="checkbox" id="showPwdBtn" onclick="showPwd()" style="margin-top: 3%;">Show Password
     </form>
   </div>
 
