@@ -36,8 +36,10 @@ function isDisplayed(el) {
 function recStopRec() {
   if (document.getElementById('rec').style.display == 'none') {
     stoprecord();
+    song = [];
   }
   else {
+    song = [];
     record();
   }
 }
@@ -85,8 +87,9 @@ function stoprecord() {
   stoprec.style.display = 'none';
   var rec = document.getElementById('rec');
   rec.style.display = 'inline';
-  window.alert("Your song has been recorded!\n"+song.toString());
-  song = [];
-  //for some strange reason keys remain highlighted after stoprecord() is called?
-  //& some extra letters are tracked i'm confused
+  document.getElementById('recsuccess').style.display = 'inline';
+  window.setTimeout(function() {
+    document.getElementById('recsuccess').style.display = 'none';
+  }, 5000);
+  console.log(song);
 }

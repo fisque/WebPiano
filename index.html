@@ -18,39 +18,85 @@
       var key = e.keyCode;
       if (key == 65 || key == 97) { //A, or middle C note
         document.getElementById('noteC').play();
-        document.getElementById('A').focus();
+        document.getElementById('A').style.backgroundColor = '#99d6ff';
+        document.getElementById('Ckey').style.backgroundColor = '#99d6ff';
       }
       if (key == 83 || key == 115) { //S, or D note
         document.getElementById('noteD').play();
-        document.getElementById('S').focus();
+        document.getElementById('S').style.backgroundColor = '#99d6ff';
+        document.getElementById('Dkey').style.backgroundColor = '#99d6ff';
       }
       if (key == 68 || key == 100) { //D, or E note
         document.getElementById('noteE').play();
-        document.getElementById('D').focus();
+        document.getElementById('D').style.backgroundColor = '#99d6ff';
+        document.getElementById('Ekey').style.backgroundColor = '#99d6ff';
       }
       if (key == 70 || key == 102) { //F, or F note
         document.getElementById('noteF').play();
-        document.getElementById('F').focus();
+        document.getElementById('F').style.backgroundColor = '#99d6ff';
+        document.getElementById('Fkey').style.backgroundColor = '#99d6ff';
       }
       if (key == 74 || key == 106) { //J, or G note
         document.getElementById('noteG').play();
-        document.getElementById('J').focus();
+        document.getElementById('J').style.backgroundColor = '#99d6ff';
+        document.getElementById('Gkey').style.backgroundColor = '#99d6ff';
       }
       if (key == 75 || key == 107) { //K, or A note
         document.getElementById('noteA').play();
-        document.getElementById('K').focus();
+        document.getElementById('K').style.backgroundColor = '#99d6ff';
+        document.getElementById('Akey').style.backgroundColor = '#99d6ff';
       }
       if (key == 76 || key == 108) { //L, or B note
         document.getElementById('noteB').play();
-        document.getElementById('L').focus();
+        document.getElementById('L').style.backgroundColor = '#99d6ff';
+        document.getElementById('Bkey').style.backgroundColor = '#99d6ff';
       }
       if (key == 58 || key == 59) { //:, or high C note
         document.getElementById('noteHighC').play();
-        document.getElementById('colon').focus();
+        document.getElementById('colon').style.backgroundColor = '#99d6ff';
+        document.getElementById('HighCkey').style.backgroundColor = '#99d6ff';
       }
       if (key == 32) { //spacebar
-        document.getElementById('space').focus();
+        document.getElementById('space').style.backgroundColor = '#99d6ff';
         recStopRec();
+      }
+    });
+    window.addEventListener('keyup', function(e) {
+      var key = e.keyCode;
+      if (key == 65 || key == 97) { //A, or middle C note
+        document.getElementById('A').style.backgroundColor = 'black';
+        document.getElementById('Ckey').style.backgroundColor = 'white';
+      }
+      if (key == 83 || key == 115) { //S, or D note
+        document.getElementById('S').style.backgroundColor = 'black';
+        document.getElementById('Dkey').style.backgroundColor = 'white';
+      }
+      if (key == 68 || key == 100) { //D, or E note
+        document.getElementById('D').style.backgroundColor = 'black';
+        document.getElementById('Ekey').style.backgroundColor = 'white';
+      }
+      if (key == 70 || key == 102) { //F, or F note
+        document.getElementById('F').style.backgroundColor = 'black';
+        document.getElementById('Fkey').style.backgroundColor = 'white';
+      }
+      if (key == 74 || key == 106) { //J, or G note
+        document.getElementById('J').style.backgroundColor = 'black';
+        document.getElementById('Gkey').style.backgroundColor = 'white';
+      }
+      if (key == 75 || key == 107) { //K, or A note
+        document.getElementById('K').style.backgroundColor = 'black';
+        document.getElementById('Akey').style.backgroundColor = 'white';
+      }
+      if (key == 76 || key == 108) { //L, or B note
+        document.getElementById('L').style.backgroundColor = 'black';
+        document.getElementById('Bkey').style.backgroundColor = 'white';
+      }
+      if (key == 186) { //:, or high C note
+        document.getElementById('colon').style.backgroundColor = 'black';
+        document.getElementById('HighCkey').style.backgroundColor = 'white';
+      }
+      if (key == 32) {
+        document.getElementById('space').style.backgroundColor = 'black';
       }
     });
   </script>
@@ -62,39 +108,35 @@
     <a href="index.html" class="link">Home</a>
     <a href="songs.html" class="link">Songs To Play</a>
     <a href="records.html" class="link">Recorded Music</a>
+    <a href="credits.html" class="link">Credits</a>
   </div>
 
-  <div id="howto" align="left">
-    <h2 align="center">HOW IT WORKS</h2>
-    <ul>
-      <li>To play the piano, use the keys on your keyboard "ASDFJKL:" or click on the keys below!</li>
-      <li>You can record what you play by clicking the "Start Recording" button, or pressing "Spacebar".</li>
-      <li>Check out the "Songs To Play" tab for some play-along songs!</li>
-      <li>All recorded music will be in the "Recorded Music" tab.</li>
-    </ul>
+  <div id="howto" align="center">
+    <p>To play the piano, use the keys on your keyboard "ASDFJKL:"!</p>
+    <p>You can record what you play by clicking the "Start Recording" button, or pressing "Spacebar".</p>
   </div>
 
   <div id="main" align="center">
     <div id="piano" align="center">
-      <button type="button" class="pianokey" id="Ckey" onclick="play('a')">C</button>
+      <button type="button" class="pianokey" id="Ckey">C</button>
       <!--div class="blackkey"></div-->
-      <button type="button" class="pianokey" id="Dkey" onclick="play('s')">D</button>
-      <button type="button" class="pianokey" id="Ekey" onclick="play('d')">E</button>
-      <button type="button" class="pianokey" id="Fkey" onclick="play('f')">F</button>
-      <button type="button" class="pianokey" id="Gkey" onclick="play('j')">G</button>
-      <button type="button" class="pianokey" id="Akey" onclick="play('k')">A</button>
-      <button type="button" class="pianokey" id="Bkey" onclick="play('l')">B</button>
-      <button type="button" class="pianokey" id="HighCkey" onclick="play(';')">C</button>
+      <button type="button" class="pianokey" id="Dkey">D</button>
+      <button type="button" class="pianokey" id="Ekey">E</button>
+      <button type="button" class="pianokey" id="Fkey">F</button>
+      <button type="button" class="pianokey" id="Gkey">G</button>
+      <button type="button" class="pianokey" id="Akey">A</button>
+      <button type="button" class="pianokey" id="Bkey">B</button>
+      <button type="button" class="pianokey" id="HighCkey">C</button>
     </div>
     <div id="keyboard" align="center">
-      <button type="button" class="keymap" id="A" onclick="play('a')">A</button>
-      <button type="button" class="keymap" id="S" onclick="play('s')">S</button>
-      <button type="button" class="keymap" id="D" onclick="play('d')">D</button>
-      <button type="button" class="keymap" id="F" onclick="play('f')">F</button>
-      <button type="button" class="keymap" id="J" onclick="play('j')">J</button>
-      <button type="button" class="keymap" id="K" onclick="play('k')">K</button>
-      <button type="button" class="keymap" id="L" onclick="play('l')">L</button>
-      <button type="button" class="keymap" id="colon" onclick="play(';')">:</button>
+      <button type="button" class="keymap" id="A">A</button>
+      <button type="button" class="keymap" id="S">S</button>
+      <button type="button" class="keymap" id="D">D</button>
+      <button type="button" class="keymap" id="F">F</button>
+      <button type="button" class="keymap" id="J">J</button>
+      <button type="button" class="keymap" id="K">K</button>
+      <button type="button" class="keymap" id="L">L</button>
+      <button type="button" class="keymap" id="colon">:</button>
     </div>
     <div id="notes" style="display:none">
       <audio id="noteC"><source src="notes/noteC.mp3" type="audio/mpeg">middle C</audio>
@@ -106,14 +148,11 @@
       <audio id="noteB"><source src="notes/noteB.mp3" type="audio/mpeg">B</audio>
       <audio id="noteHighC"><source src="notes/noteHighC.mp3" type="audio/mpeg">high C</audio>
     </div>
-    <br/>
     <div><button type="button" id="rec" onclick="record()">Start Recording</button></div>
     <div><button type="button" id="stoprec" onclick="stoprecord()" style="display:none">Stop Recording</button></div>
     <div><button type="button" id="space" onclick="recStopRec()">Spacebar</button></div>
-  </div>
-
-  <div id="credits" align="center">
-    <p>♡ made by: Grace H. & Jenny W. ♡</p>
+    <br/>
+    <p id="recsuccess" style="display:none">Your song has been recorded! Go to "Recorded Music" to access your song.</p>
   </div>
 
 </body>
