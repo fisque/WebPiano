@@ -8,46 +8,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="index_style.css">
-  <!--<script src="piano.js"></script>-->
+  <script src="records.js"></script>
   <title>Virtual Piano</title>
 </head>
 
 <body>
-  <div class="login" align="right">
-      <button type="button">Login/Signup</button>
-  </div>
+  <br/>
+  <div align="right"><a href="login.html" class="login">Login/Signup</a></div>
+  <div class="header" align="center"><h1>Recorded Music</h1></div>
 
-  <div class="header" align="center">
-    <h2>Recorded Music</h2>
-  </div>
-
-  <div class="nav" align="center">
-    <a href="index.html">Home</a> |
-    <a href="songs.html">Songs to Play</a> |
-    <a href="recordings.html">Recorded Music</a> |
+   <div class="nav" align="center">
+    <a href="index.html" class="link">Home</a>
+    <a href="songs.html" class="link">Songs To Play</a>
+    <a href="records.html" class="link">Recorded Music</a>
+    <a href="credits.html" class="link">Credits</a>
   </div>
 
   <div class="box" align="center">
     <p>Songs You've Recorded</p>
   </div>
-  <div id="container">
-    <table id="songTable" class="table">
-    <div class="smallbox">
+  <div>
+    <!--<table id="songTable">
+      <tr>
+        <td>Song 1</td>
+        <td></td>
+        <td><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>Song 2</td>
+        <td></td>
+        <td><button>Delete</button></td>
+      </tr>-->
+      
+    <div class="smallbox" id="song1">
       Song 1
-      <button onclick="remove()" style="float: right;" >Delete</button>
+      <button onclick="remove('song1')" style="float: right;">Delete</button>
       <button style="float: right; margin-right: 1%;" onclick="play()">Play</button>
     </div>
-  </table>
+    <div class="smallbox" id="song2">
+      Song 2
+      <button onclick="remove('song2')" style="float: right;" >Delete</button>
+      <button style="float: right; margin-right: 1%;" onclick="play()">Play</button>
+    </div>
+    <div class="smallbox" id="song3">
+      Song 3
+      <button onclick="remove('song3')" style="float: right;" >Delete</button>
+      <button style="float: right; margin-right: 1%;" onclick="play()">Play</button>
+    </div>
   </div>
-
-  <script>
-    function remove(){
-      if(window.confirm("Are you sure you want to delete?")){
-        console.log("Wow");
-      }
-    }
-  </script>
 
 </body>
 </html>
-
