@@ -16,9 +16,7 @@
 <body>
   <div class="main" align="center">
     <h2>Login</h2>
-    <form id="login" onsubmit="return(validate());" align="left">
-      <div id="pwd-msg" align="center" style="display:none; color: red;">Your username or password was not correct :(</div>
-      <br/><br/>
+    <form action="login.html" id="login" onsubmit="return(validate())" align="left">
       <label>Username: </label>
       <br/>
       <input type="text" id="username" autofocus required />
@@ -26,14 +24,14 @@
       <label>Password: </label>
       <br/>
       <input type="password" id="pswrd" required />
-      <br/>
-      <input type="checkbox" id="showPwdBtn" onclick="showPwd()" style="margin-top: 3%; margin-bottom: 5%;">Show Password
-      <br/>
+      <div id="pwd-msg"></div>
+      <br/><br/>
       <div id="user-msg">New? Click <a href="signup.html">here</a> to create an account!</div>
       <br/>
       <input type="submit" id="submitbutton" value="Sign in"/>
       <input type="submit" id="cancelbutton" value="Cancel"  onclick="window.location='index.html'"/>
       </br>
+      <input type="checkbox" id="showPwdBtn" onclick="showPwd()" style="margin-top: 3%;">Show Password
     </form>
   </div>
 

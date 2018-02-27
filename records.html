@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="index_style.css">
-  <!--<script src="piano.js"></script>-->
+  <script src="records.js"></script>
   <title>Virtual Piano</title>
 </head>
 
@@ -55,15 +55,6 @@
       <button style="float: right; margin-right: 1%;" onclick="play()">Play</button>
     </div>
   </div>
-
-  <script>
-    function remove(elementId){
-      if(window.confirm("Are you sure you want to delete this song?")){
-        var song = document.getElementById(elementId);
-        song.parentNode.removeChild(song);
-      }
-    }
-  </script>
 
 </body>
 </html>
