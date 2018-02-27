@@ -64,34 +64,42 @@
     window.addEventListener('keyup', function(e) {
       var key = e.keyCode;
       if (key == 65 || key == 97) { //A, or middle C note
+        document.getElementById('noteC').currentTime = 1;
         document.getElementById('A').style.backgroundColor = 'black';
         document.getElementById('Ckey').style.backgroundColor = 'white';
       }
       if (key == 83 || key == 115) { //S, or D note
+        document.getElementById('noteD').currentTime = 1;
         document.getElementById('S').style.backgroundColor = 'black';
         document.getElementById('Dkey').style.backgroundColor = 'white';
       }
       if (key == 68 || key == 100) { //D, or E note
+        document.getElementById('noteE').currentTime = 1;
         document.getElementById('D').style.backgroundColor = 'black';
         document.getElementById('Ekey').style.backgroundColor = 'white';
       }
       if (key == 70 || key == 102) { //F, or F note
+        document.getElementById('noteF').currentTime = 1;
         document.getElementById('F').style.backgroundColor = 'black';
         document.getElementById('Fkey').style.backgroundColor = 'white';
       }
       if (key == 74 || key == 106) { //J, or G note
+        document.getElementById('noteG').currentTime = 1;
         document.getElementById('J').style.backgroundColor = 'black';
         document.getElementById('Gkey').style.backgroundColor = 'white';
       }
       if (key == 75 || key == 107) { //K, or A note
+        document.getElementById('noteA').currentTime = 1;
         document.getElementById('K').style.backgroundColor = 'black';
         document.getElementById('Akey').style.backgroundColor = 'white';
       }
       if (key == 76 || key == 108) { //L, or B note
+        document.getElementById('noteB').currentTime = 1;
         document.getElementById('L').style.backgroundColor = 'black';
         document.getElementById('Bkey').style.backgroundColor = 'white';
       }
       if (key == 186) { //:, or high C note
+        document.getElementById('noteHighC').currentTime = 1;
         document.getElementById('colon').style.backgroundColor = 'black';
         document.getElementById('HighCkey').style.backgroundColor = 'white';
       }
